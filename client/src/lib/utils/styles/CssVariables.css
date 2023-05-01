@@ -1,0 +1,13 @@
+* {
+  --white: #fff;
+  --black: #2a2a2a;
+  --gray_100: #f8f9fa;
+  --gray_200: #f3f3f3;
+  --gray_300: #dee2e6;
+  --gray_400: #ced4da;
+  --gray_500: #adb5bd;
+  --gray_600: #868e96;
+  --gray_700: #495057;
+  --gray_800: #343a40;
+  --gray_900: #212529;
+}

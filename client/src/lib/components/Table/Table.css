@@ -1,0 +1,38 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 17px;
+  color: var(--black);
+}
+
+thead {
+  background-color: var(--gray_400);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: var(--gray_100);
+}
+
+tr:not(.table-header):hover {
+  background-color: var(--gray_200);
+}
+
+td {
+  border-bottom: 1px solid var(--gray_300);
+}
+
+@media screen and (max-width: 800px) {
+  table {
+    font-size: 12px;
+  }
+}

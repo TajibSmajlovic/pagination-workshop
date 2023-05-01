@@ -1,0 +1,14 @@
+.products {
+  overflow: auto;
+  height: 90vh;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 4px 16px 16px 16px;
+}
+
+@media screen and (max-width: 800px) {
+  .products {
+    padding: 4px 8px 16px 8px;
+  }
+}

@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  justify-content: flex-start;
+  margin-block: 16px;
+  gap: 8px;
+}
+
+.pagination__button {
+  color: var(--black);
+  background-color: var(--white);
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.pagination__button:not(.pagination__button--active, :disabled):hover {
+  background-color: var(--gray_200);
+}
+
+.pagination__button--active {
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid var(--gray_400);
+}
+
+.pagination__button:disabled {
+  color: var(--gray_400);
+  cursor: not-allowed;
+}
