@@ -110,8 +110,6 @@ How it looks to implement the pagination you will discover in the following exer
 
 &nbsp;
 
-## test:
-
 # Exercises:
 
 > NOTE 1: make sure to go though the whole codebase before starting to implement pagination. Your staring point for the backend should be server.js and for the client should be index.js
