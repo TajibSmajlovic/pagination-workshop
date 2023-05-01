@@ -33,15 +33,9 @@ exports.generatePaginationPageResponse = (
   // check if the total number of items fetched (totalFetchedItemsCount argument) so far is less than the total number of items
   // in the database (allItemsCount argument)
   //    if it is, then update the next variable by adding 1 to the current page number (page argument)
-  if (totalFetchedItemsCount < allItemsCount) {
-    next = page + 1;
-  }
 
   // check if the skip variable is greater than 0
   //    if it is, then update the prev variable by subtracting 1 from the current page number (page argument)
-  if (skip !== 0) {
-    prev = page - 1;
-  }
 
   return {
     next,
