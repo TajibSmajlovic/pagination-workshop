@@ -1,11 +1,14 @@
 const productService = require("../services/ProductService");
 
+const {
+  generatePaginationVariables,
+  generatePaginationPageResponse,
+} = require("../utils/pagination");
+
 exports.getAllProducts = async (req, res) => {
   try {
-    const page = parseInt(req.query.page);
-    const pageSize = parseInt(req.query.pageSize);
-    const skip = (page - 1) * pageSize;
-    const totalFetchedItemsCount = page * pageSize;
+    const { page, pageSize, skip, totalFetchedItemsCount } =
+      generatePaginationVariables(req);
 
     const products = await productService.getAllProducts(pageSize, skip);
     const allProductsCount = await productService.getAllProductsCount();
@@ -21,10 +24,12 @@ exports.getAllProducts = async (req, res) => {
 
     const response = {
       data,
-      page: {
-        next: totalFetchedItemsCount < allProductsCount ? page + 1 : null,
-        prev: skip !== 0 ? page - 1 : null,
-      },
+      page: generatePaginationPageResponse(
+        totalFetchedItemsCount,
+        allProductsCount,
+        page,
+        skip
+      ),
       status: "success",
       totalItems: allProductsCount,
     };
