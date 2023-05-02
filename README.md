@@ -164,7 +164,7 @@ For the extra backend exercise you will refactor the pagination logic in the `sr
 - `generatePaginationVariables` : responsible for generating the variables that are used for pagination
 - `generatePaginationPageResponse` : responsible for generating the `next` object property from the response object that is sent to the client
 
-> NOTE 1: follow the comments in order to solve this exercise
+> NOTE: follow the comments in order to solve this exercise
 
 - `src/utils/pagination.js` : responsible for generating the variables that are used for pagination
 
