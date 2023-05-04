@@ -25,10 +25,26 @@ mongod --version
 1. Clone the repository
 
 ```shell
-git clone https://github.com/kentcdodds/react-fundamentals.git
+git clone https://github.com/TajibSmajlovic/pagination-workshop
 ```
 
-2.  Setup the Client(Frontend)
+2.  Setup the Server(Backend)
+
+    - navigate to the server directory:
+      ```shell
+      cd server
+      ```
+    - in the server directory run:
+      ```shell
+      npm install
+      ```
+    - after installation of the dependencies is finished, run:
+      ```shell
+      npm start
+      ```
+    - (_Server will be running on http://localhost:3001_)
+
+3.  Setup the Client(Frontend)
 
     - navigate to the client directory:
 
@@ -50,21 +66,9 @@ git clone https://github.com/kentcdodds/react-fundamentals.git
 
     - (_App will be running on http://localhost:3000 in browser_)
 
-3.  Setup the Server(Backend)
+&nbsp;
 
-    - navigate to the server directory:
-      ```shell
-      cd server
-      ```
-    - in the server directory run:
-      ```shell
-      npm install
-      ```
-    - after installation of the dependencies is finished, run:
-      ```shell
-      npm start
-      ```
-    - (_Server will be running on http://localhost:3001_)
+### That's it! You are ready to go! 🦾
 
 &nbsp;
 
@@ -74,17 +78,31 @@ git clone https://github.com/kentcdodds/react-fundamentals.git
 
 > REMEMBER: Practice should always follow theory!
 
+&nbsp;
+
 ## What is pagination?
 
 Pagination is a technique for dividing a list of items into discrete pages. In web applications, this is often achieved with the 'pagination' UI component, which contains pagination buttons that are used to navigate through the pages.
 
 Example of pagination 'UI' component:
 
-![Example of how Pagination component should look like in the end](./images/pagination.png "Pagination image component")
+![Example of how Pagination component should look like in the end](./assets/images/pagination.png "Pagination image component")
 
-&nbsp;
+Example of how pagination works:
+
+![Example of how pagination should look like in the end](./assets/gifs/pagination.gif)
 
 Other type of pagination is called "infinite scroll". This type of pagination is used by most of the social media platforms like Facebook, Instagram, Twitter, etc.
+
+Example of infinite scroll on desktop screen:
+
+![Example of how infinitive scroll should look like in the end on desktop screens](./assets/gifs/infinitive-scroll-desktop.gif)
+
+Example of infinite scroll on mobile screen:
+
+![Example of how infinitive scroll should look like in the end on mobile screens](./assets/gifs/infinitive-scroll-mobile.gif)
+
+In this workshop we will be implementing both types of pagination.
 
 ## Why do we need pagination?
 
@@ -131,11 +149,11 @@ On the client(frontend), there should be made changes in three files in order to
 
 - `src/components/Pagination.js` : responsible for rendering the pagination buttons that are part of the table and are used to navigate through the pages
 
-  ![Example of how Pagination component should look like in the end](./images/pagination.png "Pagination image component")
+  ![Example of how Pagination component should look like in the end](./assets/images/pagination.png "Pagination image component")
 
 - `src/Products/ProductsTable.js` : responsible for rendering the products within the table
 
-  ![Example of how products table looks like](./images/table.png "products table")
+  ![Example of how products table looks like](./assets/images/table.png "products table")
 
 ## Extra Exercises:
 
@@ -151,7 +169,7 @@ Changes should be made in the following file:
 
 - `src/Products/ProductsCards.js` : responsible for rendering the products within as a list of cards
 
-![Example of how products cards looks like](./images/products-cards.png "products cards")
+![Example of how products cards looks like](./assets/images/products-cards.png "products cards")
 
 </details>
 
@@ -164,7 +182,7 @@ For the extra backend exercise you will refactor the pagination logic in the `sr
 - `generatePaginationVariables` : responsible for generating the variables that are used for pagination
 - `generatePaginationPageResponse` : responsible for generating the `next` object property from the response object that is sent to the client
 
-> NOTE 1: follow the comments in order to solve this exercise
+> NOTE: follow the comments in order to solve this exercise
 
 - `src/utils/pagination.js` : responsible for generating the variables that are used for pagination
 
