@@ -88,9 +88,19 @@ Example of pagination 'UI' component:
 
 ![Example of how Pagination component should look like in the end](./assets/images/pagination.png "Pagination image component")
 
+Example of how pagination works:
+
+![Example of how pagination should look like in the end](./assets/gifs/pagination.gif)
+
 Other type of pagination is called "infinite scroll". This type of pagination is used by most of the social media platforms like Facebook, Instagram, Twitter, etc.
 
-![Example of how infinitive scroll should look like in the end](./assets/gifs/infinitive-scroll.gif)
+Example of infinite scroll on desktop screen:
+
+![Example of how infinitive scroll should look like in the end on desktop screens](./assets/gifs/infinitive-scroll-desktop.gif)
+
+Example of infinite scroll on mobile screen:
+
+![Example of how infinitive scroll should look like in the end on mobile screens](./assets/gifs/infinitive-scroll-mobile.gif)
 
 In this workshop we will be implementing both types of pagination.
 
