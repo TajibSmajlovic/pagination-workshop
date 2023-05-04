@@ -84,25 +84,37 @@ git clone https://github.com/TajibSmajlovic/pagination-workshop
 
 Pagination is a technique for dividing a list of items into discrete pages. In web applications, this is often achieved with the 'pagination' UI component, which contains pagination buttons that are used to navigate through the pages.
 
-Example of pagination 'UI' component:
+Example of numeric pagination 'UI' component:
 
 ![Example of how Pagination component should look like in the end](./assets/images/pagination.png "Pagination image component")
 
-Example of how pagination works:
+There are several types of pagination: numeric pagination, load more pagination, infinite scrolling pagination, alphabetical pagination, date-based pagination, etc.
+
+1. Numeric pagination: This is the most common pagination technique, where the pages are numbered and users can navigate to a specific page by clicking on the corresponding page number. For example, if you have 50 pages of search results, users can click on page 3 to go directly to that page.
+
+2. Load more pagination: This technique is used when you want to display more items without loading a new page. When the user reaches the end of the page, a "Load More" button is displayed, which allows the user to load more items without navigating to a new page.
+
+3. Infinite scrolling pagination: This technique is similar to load more pagination, but instead of a button, new items are loaded automatically as the user scrolls down the page. This technique is often used in social media feeds where new posts are loaded as the user scrolls down the page.
+
+4. Alphabetical pagination: This technique is used when you have a large dataset that is sorted alphabetically. The letters of the alphabet are displayed on the page, and users can click on a letter to see all the items that start with that letter. For example, if you have a list of contacts, users can click on the letter "A" to see all the contacts whose names start with "A".
+
+5. Date-based pagination: This technique is used when you have a large dataset that is sorted by date. The pages are divided by date ranges, such as "Last 7 Days", "Last 30 Days", or "This Year". Users can click on a date range to see all the items within that range.
+
+Example of numeric pagination:
 
 ![Example of how pagination should look like in the end](./assets/gifs/pagination.gif)
 
 Other type of pagination is called "infinite scroll". This type of pagination is used by most of the social media platforms like Facebook, Instagram, Twitter, etc.
 
-Example of infinite scroll on desktop screen:
+Example of infinite scroll pagination on desktop screen:
 
 ![Example of how infinitive scroll should look like in the end on desktop screens](./assets/gifs/infinitive-scroll-desktop.gif)
 
-Example of infinite scroll on mobile screen:
+Example of infinite scroll pagination on mobile screen:
 
 ![Example of how infinitive scroll should look like in the end on mobile screens](./assets/gifs/infinitive-scroll-mobile.gif)
 
-In this workshop we will be implementing both types of pagination.
+In this workshop we will be implementing numeric and infinitive scrolling pagination.
 
 ## Why do we need pagination?
 
@@ -124,7 +136,24 @@ Pagination works by dividing the list of items into discrete pages. Each page co
 
 For example, if you have 1000 products to display, instead of loading them all at once, you can break them up into smaller pages, such as 10 products per page. This means that the user can view the first 10 products on the first page, then click a button to go to the next page and see the next 10 products, and so on.
 
-How it looks to implement the pagination you will discover in the following exercises.
+From the backend perspective, pagination works by dividing the data into smaller chunks or subsets and returning only a subset of data to the client on each request. The process involves the following steps:
+
+- The client sends a request to the server via [query params][query-params] for a specific page with a defined page size
+  - the name of the query params can be anything, but the most common are: `page` and `pageSize`
+- The server receives the request and calculates the offset and limit values to determine the subset of data to be returned
+- The server retrieves the subset of data from the database using the offset and limit values
+- The server sends the subset of data to the client
+- The client displays the subset of data on the page
+- The client can then request additional pages of data, and the process repeats until all data has been retrieved
+
+By using pagination, the server can minimize the amount of data it needs to retrieve from the database, which reduces the server's workload and makes the application more responsive.
+
+From the frontend perspective there are only two things that are important:
+
+- pass the correct query params to the backend
+- display the correct data on the frontend
+
+How it looks to implement the pagination on both backend and frontend you will discover in the following exercises.
 
 &nbsp;
 
@@ -196,3 +225,4 @@ After the functions are implemented, you should refactor the `src/controllers/Pr
 [mongodb]: https://www.mongodb.com/
 [react]: https://reactjs.org/
 [nodejs]: https://nodejs.org/en/
+[query-params]: https://www.abstractapi.com/api-glossary/query-parameters#:~:text=Query%20Parameter%20Example,parameters%2C%20forming%20a%20query%20string.
