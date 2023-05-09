@@ -1,5 +1,16 @@
 # [_React_][react] and [_Node.js_][nodejs] Workshop - Pagination Example
 
+# Table of Contents
+
+- [System Requirements](#system-requirements)
+- [Instructions to run the app locally](#instructions-to-run-the-app-locally)
+- [Theory behind pagination](#theory-behind-pagination)
+  - [What is pagination](#what-is-pagination)
+  - [Why do we need pagination](#why-do-we-need-pagination)
+  - [How does pagination work](#how-does-pagination-work)
+- [Exercises](#exercises)
+- [Extra Exercises](#extra-exercises)
+
 ## System Requirements
 
 - [git][git] v2.13 or greater
