@@ -30,7 +30,6 @@ exports.getAllProducts = async (req, res) => {
         page,
         skip
       ),
-      status: "success",
       totalItems: allProductsCount,
     };
 
