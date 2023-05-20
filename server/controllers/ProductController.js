@@ -25,7 +25,6 @@ exports.getAllProducts = async (req, res) => {
         next: totalFetchedItemsCount < allProductsCount ? page + 1 : null,
         prev: skip !== 0 ? page - 1 : null,
       },
-      status: "success",
       totalItems: allProductsCount,
     };
 
