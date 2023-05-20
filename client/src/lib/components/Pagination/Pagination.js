@@ -2,14 +2,14 @@ import { useState } from "react";
 
 import "./Pagination.css";
 
-const getPaginationItems = (currentPaginationItem, totalPaginationItems) => {
+const getPaginationItems = (currentPage, totalPages) => {
   const pages = [];
 
-  for (let i = 1; i <= totalPaginationItems; i++) {
+  for (let i = 1; i <= totalPages; i++) {
     pages.push({
       pageNumber: i,
       className: `pagination__button ${
-        currentPaginationItem === i ? "pagination__button--active" : ""
+        currentPage === i ? "pagination__button--active" : ""
       }`,
     });
   }
