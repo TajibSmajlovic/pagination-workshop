@@ -7,8 +7,9 @@ exports.getAllProducts = async (req, res) => {
     // hint: use req.query to access query params
 
     // calculate the value of skip, which is the number of items to skip before returning the result, by multiplying page-1 and pageSize
+    // hint: (page - 1) * pageSize
 
-    // calculate the total number of items fetched so far by adding skip and pageSize
+    // calculate the total number of items fetched so far by multiplying skip and pageSize
 
     // modify getAllProducts() function from the productService to accept pageSize and skip as parameters
     const products = await productService.getAllProducts();
@@ -33,7 +34,6 @@ exports.getAllProducts = async (req, res) => {
     //    - prev: the prev property is calculated by subtracting 1 from the current page number if the skip is greater than 0, otherwise it is null
     //   2. add new object property called totalItems which is the total number of items in the database
 
-    // the next and previous pages, the status, and the total number of items
     const response = {
       data,
     };
