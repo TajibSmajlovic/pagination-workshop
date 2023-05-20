@@ -43,7 +43,7 @@ export const Pagination = ({
 
   return (
     <div className='pagination'>
-      {/* 5. Render a "Prev" button with the disabled attribute set to !prevPage (meaning the button is disabled
+      {/* 5. Render a "Prev" button with the 'pagination__button' className and with the disabled attribute set to !prevPage (meaning the button is disabled
             if there is no previous page)
             5.1 Attach an onClick event listener that calls the handleClick function with prevPage as an argument.
       */}
@@ -53,7 +53,7 @@ export const Pagination = ({
             6.3 Assign the button's onClick prop a function that calls the handleClick function with the button's pageNumber as an argument.
             6.4 Finally, display the button's pageNumber as its content.
       */}
-      {/* 7. Render a "Next" button with the disabled attribute set to !nextPage (meaning the button is disabled
+      {/* 7. Render a "Next" button with the 'pagination__button' className and with the disabled attribute set to !nextPage (meaning the button is disabled
             if there is no next page)
             7.1 Attach an onClick event listener that calls the handleClick function with nextPage as an argument.
       */}
