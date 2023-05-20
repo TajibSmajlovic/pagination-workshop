@@ -2,16 +2,16 @@ import { useState } from "react";
 
 import "./Pagination.css";
 
-const getPaginationItems = (currentPaginationItem, totalPaginationItems) => {
+const getPaginationItems = (currentPage, totalPages) => {
   // 1. Initialize an empty array called pages. This will be used to store the pagination items.
   //
-  // 2. Use a for loop to iterate from 1 up to totalPaginationItems.
+  // 2. Use a for loop to iterate from 1 up to totalPages.
   //    On each iteration, create an object with two properties: pageNumber and className
   //  2.1 Set the value of pageNumber to the current iteration value of i
   //  2.2 Set the value of className to a string with the value of 'pagination__button'
   //    2.2.1 Use a ternary operator or if-else to add the "pagination__button--active" class
-  //          to the className string if the current pageNumber is equal to the currentPaginationItem
-  //          EXAMPLE: currentPaginationItem === i ? "pagination__button--active" : ""
+  //          to the className string if the current pageNumber is equal to the currentPage
+  //          EXAMPLE: currentPage === i ? "pagination__button--active" : ""
   //
   // 3. Push the object to the pages array
   //
