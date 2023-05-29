@@ -39,7 +39,7 @@ export const Pagination = ({
 
   // 3. Use the getPaginationItems function to generate an array of pagination items, passing in the currentPage and totalPages variables as arguments.
 
-  // 4. Create a handleClick function that takes a page parameter and updates the currentPage state to that value using setCurrentPage.
+  // 4. Create a handleClick function that takes a page parameter and updates the currentPage state as well as calling the onPageChange function with the page parameter as an argument.
 
   return (
     <div className='pagination'>
