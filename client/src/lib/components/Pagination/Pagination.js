@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./Pagination.css";
 
 const getPaginationItems = (currentPage, totalPages) => {
@@ -18,29 +16,23 @@ const getPaginationItems = (currentPage, totalPages) => {
 };
 
 export const Pagination = ({
+  currentPage,
   totalItems,
   itemsPerPage,
   prevPage,
   nextPage,
   onPageChange,
 }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const paginationItems = getPaginationItems(currentPage, totalPages);
-
-  const handleClick = (page) => {
-    setCurrentPage(page);
-    onPageChange(page);
-  };
 
   return (
     <div className='pagination'>
       <button
         className='pagination__button'
         disabled={!prevPage}
-        onClick={() => handleClick(prevPage)}
+        onClick={() => onPageChange(prevPage)}
       >
         Prev
       </button>
@@ -49,7 +41,7 @@ export const Pagination = ({
         <button
           key={paginationItem.pageNumber}
           className={paginationItem.className}
-          onClick={() => handleClick(paginationItem.pageNumber)}
+          onClick={() => onPageChange(paginationItem.pageNumber)}
         >
           {paginationItem.pageNumber}
         </button>
@@ -58,7 +50,7 @@ export const Pagination = ({
       <button
         className='pagination__button'
         disabled={!nextPage}
-        onClick={() => handleClick(nextPage)}
+        onClick={() => onPageChange(nextPage)}
       >
         Next
       </button>

@@ -39,6 +39,7 @@ export const ProductsTable = () => {
       <Table columns={columns} data={response.data} />
 
       <Pagination
+        currentPage={currentPage}
         itemsPerPage={pageSize}
         totalItems={response.totalItems}
         nextPage={response.page?.next}
