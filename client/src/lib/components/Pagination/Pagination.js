@@ -27,19 +27,16 @@ const getPaginationItems = (currentPage, totalPages) => {
  * @param onPageChange - function that will be called when a user clicks on a pagination button
  */
 export const Pagination = ({
+  currentPage,
   totalItems,
   itemsPerPage,
   prevPage,
   nextPage,
   onPageChange,
 }) => {
-  // 1. Use the useState hook to initialize a currentPage and setCurrentPage
-
   // 2. Calculate the totalPages by dividing totalItems by itemsPerPage and rounding up to the nearest integer using Math.ceil()
 
   // 3. Use the getPaginationItems function to generate an array of pagination items, passing in the currentPage and totalPages variables as arguments.
-
-  // 4. Create a handleClick function that takes a page parameter and updates the currentPage state as well as calling the onPageChange function with the page parameter as an argument.
 
   return (
     <div className='pagination'>
@@ -50,7 +47,7 @@ export const Pagination = ({
       {/* 6. Use the map() method to iterate over the paginationItems array and render a button for each pagination item
             6.1 Give each button a key prop equal to its pageNumber value.
             6.2 Assign the button's className prop the value of paginationItem.className.
-            6.3 Assign the button's onClick prop a function that calls the handleClick function with the button's pageNumber as an argument.
+            6.3 Assign the button's onClick prop a function that calls the onPageChange function with the button's pageNumber as an argument.
             6.4 Finally, display the button's pageNumber as its content.
       */}
       {/* 7. Render a "Next" button with the 'pagination__button' className and with the disabled attribute set to !nextPage (meaning the button is disabled

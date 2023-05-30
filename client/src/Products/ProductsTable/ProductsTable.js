@@ -18,6 +18,7 @@ const columns = [
 export const ProductsTable = () => {
   const [response, setResponse] = useState({
     data: [],
+    page: {},
   });
 
   // declare the state using useState hook that will be a number to keep track of the current page
@@ -44,6 +45,7 @@ export const ProductsTable = () => {
       <Table columns={columns} data={response.data} />
       {/* {
       render <Pagination /> component with the following props:
+        currentPage: This should be set to the page state variable that is declared above
         itemsPerPage: This should be set to the same value as the pageSize variable that is used in the API url
           itemsPerPage is used to calculate the total number of pages that will be rendered as buttons in the pagination component
         totalItems: This should be set to the total number of items available from the API response (hint: response.totalItems)
