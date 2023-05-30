@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./Pagination.css";
 
 const getPaginationItems = (currentPage, totalPages) => {
