@@ -40,7 +40,7 @@ export const Pagination = ({
     <div className='pagination'>
       {/* 3. Render a "Prev" button with the 'pagination__button' className and with the disabled attribute set to !prevPage (meaning the button is disabled
             if there is no previous page)
-            3.1 Attach an onClick event listener that calls the handleClick function with prevPage as an argument.
+            3.1 Attach an onClick event listener that calls the onPageChange function with prevPage as an argument.
       */}
       {/* 4. Use the map() method to iterate over the paginationItems array and render a button for each pagination item
             4.1 Give each button a key prop equal to its pageNumber value.
@@ -50,7 +50,7 @@ export const Pagination = ({
       */}
       {/* 5. Render a "Next" button with the 'pagination__button' className and with the disabled attribute set to !nextPage (meaning the button is disabled
             if there is no next page)
-            5.1 Attach an onClick event listener that calls the handleClick function with nextPage as an argument.
+            5.1 Attach an onClick event listener that calls the onPageChange function with nextPage as an argument.
       */}
     </div>
   );
