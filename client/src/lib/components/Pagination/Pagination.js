@@ -32,25 +32,25 @@ export const Pagination = ({
   nextPage,
   onPageChange,
 }) => {
-  // 2. Calculate the totalPages by dividing totalItems by itemsPerPage and rounding up to the nearest integer using Math.ceil()
+  // 1. Calculate the totalPages by dividing totalItems by itemsPerPage and rounding up to the nearest integer using Math.ceil()
 
-  // 3. Use the getPaginationItems function to generate an array of pagination items, passing in the currentPage and totalPages variables as arguments.
+  // 2. Use the getPaginationItems function to generate an array of pagination items, passing in the currentPage and totalPages variables as arguments.
 
   return (
     <div className='pagination'>
-      {/* 5. Render a "Prev" button with the 'pagination__button' className and with the disabled attribute set to !prevPage (meaning the button is disabled
+      {/* 3. Render a "Prev" button with the 'pagination__button' className and with the disabled attribute set to !prevPage (meaning the button is disabled
             if there is no previous page)
-            5.1 Attach an onClick event listener that calls the handleClick function with prevPage as an argument.
+            3.1 Attach an onClick event listener that calls the handleClick function with prevPage as an argument.
       */}
-      {/* 6. Use the map() method to iterate over the paginationItems array and render a button for each pagination item
-            6.1 Give each button a key prop equal to its pageNumber value.
-            6.2 Assign the button's className prop the value of paginationItem.className.
-            6.3 Assign the button's onClick prop a function that calls the onPageChange function with the button's pageNumber as an argument.
-            6.4 Finally, display the button's pageNumber as its content.
+      {/* 4. Use the map() method to iterate over the paginationItems array and render a button for each pagination item
+            4.1 Give each button a key prop equal to its pageNumber value.
+            4.2 Assign the button's className prop the value of paginationItem.className.
+            4.3 Assign the button's onClick prop a function that calls the onPageChange function with the button's pageNumber as an argument.
+            4.4 Finally, display the button's pageNumber as its content.
       */}
-      {/* 7. Render a "Next" button with the 'pagination__button' className and with the disabled attribute set to !nextPage (meaning the button is disabled
+      {/* 5. Render a "Next" button with the 'pagination__button' className and with the disabled attribute set to !nextPage (meaning the button is disabled
             if there is no next page)
-            7.1 Attach an onClick event listener that calls the handleClick function with nextPage as an argument.
+            5.1 Attach an onClick event listener that calls the handleClick function with nextPage as an argument.
       */}
     </div>
   );
